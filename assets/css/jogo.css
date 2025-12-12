@@ -118,3 +118,9 @@
         right: 100%;
     }
 }
+
+@media (min-width: 1800px) {
+    .terra {
+       height: 395px;
+    }
+}

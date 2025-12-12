@@ -5,9 +5,7 @@
     font-family: 'Press Start 2P', cursive;
 }
 
-/*começo do css*/
-
-.tela {
+.tela-cre {
     width: 100%;
     height: 100vh;
     background: linear-gradient(#2eeeee, #cfd4d0);
@@ -15,31 +13,6 @@
     align-items: center;
     overflow: hidden;
     position: relative;
-}
-
-.mario {
-    width: 150px;
-    position: absolute;
-    bottom: 140px;
-}
-
-.nuvens {
-    position: absolute;
-    width: 550px;
-    animation: nuvens-animation 20s infinite linear;
-    bottom: 350px;
-    overflow: hidden;
-    filter: blur(0.6px);
-    opacity: 0.9;
-}
-
-.bird {
-    position: absolute;
-    bottom: 350px;
-    width: 50px;
-    animation: bird 10s infinite linear;
-    right: -80%;
-    overflow: hidden;
 }
 
 .bloco-centro {
@@ -63,17 +36,43 @@
 /*css dentro do bloco do menu */
 
 .titulo {
-    color: #e8fffd;
+    color: #2eeeee;
     transform: translateY(-35px);
-    text-shadow:
-    0 0 5px rgb(255, 255, 255),
-    0 0 10px #0ff,
-    0 0 20px #0ff,
-    0 0 40px #0ff,
-    0 0 80px #0ff;
 }
 
-.start {
+.barra {
+    width: 500px;
+    height: 3px;
+    background-color: #2eeeee;
+}
+
+.game-design {
+   max-width: 500px;
+   color: #2eeeee;
+}
+
+.art {
+   max-width: 500px;
+   margin-right: 42px;
+   color: #2eeeee;
+}
+
+.programming {
+   max-width: 500px;
+   color: #2eeeee;
+}
+
+.sound {
+   max-width: 500px;
+   color: #2eeeee;
+}
+
+.special-thanks {
+   max-width: 500px;
+   color: #2eeeee;
+}
+
+.voltar {
     font-size: medium;
     width: 220px;
     height: 50px;
@@ -89,60 +88,14 @@
     box-shadow: 0 0 10px #00faff, 0 0 25px #00faff;
 }
 
-.start:hover {
+.voltar:hover {
     color: #106ad1;
     transition: 150ms;
     transform: scale(1.2);
     filter: brightness(1.2);
 }
 
-.config {
-    font-size: medium;
-    width: 220px;
-    height: 50px;
-    background-color: aqua;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    border: 3px solid black;
-    text-decoration: none;
-    color: #ffffff;
-    box-shadow: 0 0 25px rgba(0,0,0,0.3);
-    box-shadow: 0 0 10px #00faff, 0 0 25px #00faff;
-}
-
-.config:hover {
-    color: #106ad1;
-    transition: 150ms;
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
-
-.creditos {
-    font-size: medium;
-    width: 220px;
-    height: 50px;
-    background-color: aqua;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    border: 3px solid black;
-    text-decoration: none;
-    color: #ffffff;
-    box-shadow: 0 0 25px rgba(0,0,0,0.3);
-    box-shadow: 0 0 10px #00faff, 0 0 25px #00faff;
-}
-
-.creditos:hover {
-    color: #106ad1;
-    transition: 150ms;
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
-
-/*chão da tela de menu*/
+/*chão da tela de créditos*/
 
 .grass {
     width: 100%;
@@ -155,35 +108,6 @@
     width: 100%;
     height: 125px;
 }
-
-/*animações na tela de menu */
-
-@keyframes nuvens-animation {
-    from {
-        right: -550px;
-    }
-
-    to {
-        right: 100vw;
-    }
-}
-
-@keyframes bird {
-    from {
-        right: -0px;
-    }
-
-    to {
-        right: 100vw;
-    }
-}
-
-@keyframes popup {
-    from { transform: translateY(80px) scale(0.9); opacity: 0; }
-    to   { transform: translateY(40px) scale(1); opacity: 1; }
-}
-
-/*responsividade para telas com mais de 1600px, focar em mobile depois*/
 
 @media (min-width: 1600px) {
 
@@ -228,5 +152,3 @@
         height: 280px;
     }
 }
-
-
