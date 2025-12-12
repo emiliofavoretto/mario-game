@@ -10,7 +10,7 @@
 .tela {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(#2eeeee, #cfd4d0);
+    background: linear-gradient(#5ceaff, #9df1ff, #bff8ff);
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -21,6 +21,7 @@
     width: 150px;
     position: absolute;
     bottom: 140px;
+    animation: mario-jump 10s infinite linear;
 }
 
 .nuvens {
@@ -183,6 +184,24 @@
     to   { transform: translateY(40px) scale(1); opacity: 1; }
 }
 
+@keyframes mario-jump {
+    
+    0% {
+        bottom: 140px;
+    }
+
+    3% {
+        bottom: 320px;
+    }
+    7% {
+        bottom: 140px;
+    }
+
+    100%{
+        bottom: 140px;
+    }
+}
+
 /*responsividade para telas com mais de 1600px, focar em mobile depois*/
 
 @media (min-width: 1600px) {
@@ -227,6 +246,24 @@
     .ground {
         height: 280px;
     }
+
+    @keyframes mario-jump {
+    
+    0% {
+        bottom: 295px;
+    }
+
+    3% {
+        bottom: 475px;
+    }
+    7% {
+        bottom: 295px;
+    }
+
+    100%{
+        bottom: 295px;
+    }
+}
 }
 
 
