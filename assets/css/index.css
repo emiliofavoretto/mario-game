@@ -2,22 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
 }
 
-.game-board{
-   width: 100%;
-   height: 550px;
-   border-bottom: 15px solid #07af23;
-   margin: 0 auto;
-   position: relative;
-   overflow: hidden;
-   background: linear-gradient(#2eeeee, #cfd4d0);
+.tela {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#2eeeee, #cfd4d0);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .mario {
     width: 150px;
     position: absolute;
-    bottom: 0;
+    bottom: 140px;
+}
+
+.nuvens {
+    position: absolute;
+    width: 550px;
+    animation: nuvens-animation 20s infinite linear;
+    bottom: 350px;
+    overflow: hidden;
+    filter: blur(0.6px);
+    opacity: 0.9;
 }
 
 .bird {
@@ -26,74 +37,111 @@
     width: 50px;
     animation: bird 10s infinite linear;
     right: -80%;
+    overflow: hidden;
 }
 
-.jump {
-    animation: mario-jump 500ms ease-out;
-}
-
-.pipe {
-    position: absolute;
-    bottom: 0;
-    width: 80px;
-    right: -80px;
-    animation: pipe-animation 1.5s infinite linear;
-}
-
-.nuvens {
-    position: absolute;
-    width: 550px;
-    animation: nuvens-animation 20s infinite linear;
-}
-
-.terra {
-   width: 100%;
-   height: 90px;
-   background-color: rgb(100, 59, 6);
-}
-
-.pontos {
+.bloco-centro {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    gap: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    transform: translateY(40px);
+    image-rendering: pixelated;
+    border: 6px solid black;
+    animation: popup 0.8s ease;
+}
+
+.titulo {
+    color: #2eeeee;
+    transform: translateY(-35px);
+}
+
+.start {
+    font-size: medium;
+    width: 220px;
+    height: 50px;
+    background-color: aqua;
     align-items: center;
     display: flex;
     justify-content: center;
-    margin: 2% auto;
-    width: 150px;
-    height: 50px;
-    background-color: aliceblue;
     border-radius: 10px;
     border: 3px solid black;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px #00faff, 0 0 25px #00faff;
 }
 
-@keyframes mario-jump {
-    
-    0% {
-        bottom: 0;
-    }
-
-    40% {
-        bottom: 180px;
-    }
-    50% {
-        bottom: 180px;
-    }
-    60% {
-        bottom: 180px;
-    }
-
-    100%{
-        bottom: 0;
-    }
+.start:hover {
+    color: #106ad1;
+    transition: 150ms;
+    transform: scale(1.2);
+    filter: brightness(1.2);
 }
 
-@keyframes pipe-animation {
-    from {
-       right: 0;
-    }
+.config {
+    font-size: medium;
+    width: 220px;
+    height: 50px;
+    background-color: aqua;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 3px solid black;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px #00faff, 0 0 25px #00faff;
+}
 
-    to {
-       right: 100%;
-    }
+.config:hover {
+    color: #106ad1;
+    transition: 150ms;
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.creditos {
+    font-size: medium;
+    width: 220px;
+    height: 50px;
+    background-color: aqua;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 3px solid black;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px #00faff, 0 0 25px #00faff;
+}
+
+.creditos:hover {
+    color: #106ad1;
+    transition: 150ms;
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.grass {
+    width: 100%;
+    height: 15px;
+    background-color: #07af23;
+}
+
+.ground {
+    background-color: rgb(100, 59, 6);
+    width: 100%;
+    height: 125px;
 }
 
 @keyframes nuvens-animation {
@@ -102,16 +150,22 @@
     }
 
     to {
-        right: 100%;
+        right: 100vw;
     }
 }
 
 @keyframes bird {
-    form {
-        right: -550px;
+    from {
+        right: -0px;
     }
 
     to {
-        right: 100%;
+        right: 100vw;
     }
 }
+
+@keyframes popup {
+    from { transform: translateY(80px) scale(0.9); opacity: 0; }
+    to   { transform: translateY(40px) scale(1); opacity: 1; }
+}
+

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jogo simples-mario</title>
+    <title>Menu do jogo</title>
     <link rel="stylesheet" href="./assets/css/index.css">
-    <script src="./assets/js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="game-board">
-        <p class="pontos">pontos: 0</p>
-        <img class="nuvens" src="./assets/img/clouds.png" alt="nuvens">
+    <div class="tela">
+        <img class="nuvens" src="./assets/img/clouds.png" alt="nuvem">
         <img class="bird" src="./assets/img/Flappy-Bird-Pixel-Art-PNG-Download-Image.gif" alt="blue-bird">
         <img class="mario" src="./assets/img/mario.gif" alt="mario">
-        <img class="pipe" src="./assets/img/pipe.png" alt="pipe">
+        <div class="bloco-centro">
+            <h2 class="titulo">MARIO RUN</h2>
+            <a class="start" href="./pages/jogo.html">Start</a>
+            <a class="config" href="./pages/config.html">Configurações</a>
+            <a class="creditos" href="./pages/creditos.html">creditos</a>
+        </div>
+        <div class="grass"></div>
+        <div class="ground"></div>
     </div>
-    <div class="terra"></div>
     
 </body>
 </html>
