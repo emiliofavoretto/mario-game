@@ -21,7 +21,7 @@
     width: 150px;
     position: absolute;
     bottom: 140px;
-    animation: mario-jump 10s infinite linear;
+    animation: mario-jump 12s infinite linear;
 }
 
 .nuvens {
@@ -190,15 +190,31 @@
         bottom: 140px;
     }
 
-    3% {
+    2% {
         bottom: 320px;
     }
-    7% {
+    5% {
         bottom: 140px;
     }
 
+    30% {
+        left: 0px;
+    }
+
+    50% {
+        left: 200px;
+    }
+
+    55% {
+        left: 200px;
+    }
+
+    70% {
+        left: 0px;
+    }
+
     100%{
-        bottom: 140px;
+        bottom: 295px;
     }
 }
 
@@ -253,11 +269,27 @@
         bottom: 295px;
     }
 
-    3% {
+    2% {
         bottom: 475px;
     }
-    7% {
+    5% {
         bottom: 295px;
+    }
+
+    30% {
+        left: 0px;
+    }
+
+    50% {
+        left: 200px;
+    }
+
+    55% {
+        left: 200px;
+    }
+
+    70% {
+        left: 0px;
     }
 
     100%{
