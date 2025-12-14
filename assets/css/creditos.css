@@ -41,34 +41,35 @@
 }
 
 .barra {
-    width: 500px;
+    width: 350px;
     height: 3px;
     background-color: #2eeeee;
 }
 
 .game-design {
-    max-width: 500px;
+    max-width: 400px;
     color: #2eeeee;
 }
 
 .art {
-    max-width: 500px;
-    margin-right: 42px;
+    max-width: 400px;
+    margin-right: 48px;
     color: #2eeeee;
 }
 
 .programming {
-    max-width: 500px;
+    max-width: 400px;
     color: #2eeeee;
 }
 
 .sound {
-    max-width: 500px;
+    max-width: 400px;
     color: #2eeeee;
+    margin-right: 20px;
 }
 
 .special-thanks {
-    max-width: 500px;
+    max-width: 400px;
     color: #2eeeee;
 }
 

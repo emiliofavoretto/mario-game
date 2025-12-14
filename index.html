@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="tela">
         <img class="nuvens" src="./assets/img/clouds.png" alt="nuvem">
@@ -14,13 +16,34 @@
         <img class="mario" src="./assets/img/mario.gif" alt="mario">
         <div class="bloco-centro">
             <h2 class="titulo">MARIO RUN</h2>
-            <a class="start" href="./pages/jogo.html">Start</a>
-            <a class="config" href="./pages/config.html">Configurações</a>
-            <a class="creditos" href="./pages/creditos.html">créditos</a>
+            <a class="botao-som start" href="./pages/jogo.html">Start</a>
+            <a class="botao-som config" href="./pages/config.html">Configurações</a>
+            <a class="botao-som creditos" href="./pages/creditos.html">Créditos</a>
+            <audio id="somClick" src="./assets/sounds/click.wav"></audio>
+            <script>
+                const somClick = document.getElementById("somClick");
+                const botoes = document.querySelectorAll(".botao-som");
+
+                botoes.forEach(botao => {
+                    botao.addEventListener("click", (e) => {
+                        e.preventDefault();
+
+                        somClick.currentTime = 0;
+                        somClick.play();
+
+                        const destino = botao.getAttribute("href");
+
+                        setTimeout(() => {
+                            window.location.href = destino;
+                        }, 200);
+                    });
+                });
+            </script>
         </div>
         <div class="grass"></div>
         <div class="ground"></div>
     </div>
-    
+
 </body>
+
 </html>

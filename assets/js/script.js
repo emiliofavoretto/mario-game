@@ -1,11 +1,23 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const pontosElement = document.querySelector('.pontos');
+const somGameOver = new Audio("../assets/sounds/hitHurt.wav");
+somGameOver.volume = 0.6;
+const somJump = new Audio("../assets/sounds/jump.wav");
+somJump.volume = 0.4;
 
 let pontos = 0;
 let contouPonto = false;
 
 const jump = () => {
+
+    if (mario.classList.contains('jump')) return;
+
+    // som de pulo
+    somJump.currentTime = 0;
+    somJump.play();
+
+    mario.classList.add('jump');
     mario.classList.add('jump');
 
     setTimeout(() => {
@@ -19,6 +31,9 @@ const loop = setInterval(() => {
     const marioposition = +window.getComputedStyle(mario).bottom.replace('px', '');
 
     if (pipePosition <= 120 && pipePosition > 0 && marioposition < 80) {
+
+        somGameOver.currentTime = 0;
+        somGameOver.play();// som do GameOver
 
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`;
@@ -35,8 +50,8 @@ const loop = setInterval(() => {
 
     if (pipePosition < 50 && !contouPonto) {
         pontos++; // soma 1 ponto
-        pontosElement.textContent = "pontos:" + pontos // atualiza o HTML
-        contouPonto = true; // impede contar várias vezes
+        pontosElement.textContent = "pontos:" + pontos //html
+        contouPonto = true;
     }
 
     // Quando o cano volta ao início, resetamos a contagem
@@ -44,7 +59,11 @@ const loop = setInterval(() => {
         contouPonto = false;
     }
 
-
 }, 10);
 
-document.addEventListener('keydown', jump);
+document.addEventListener("keydown", (e) => {
+    if (e.code === "Space") {
+        jump();
+    }
+});
+
