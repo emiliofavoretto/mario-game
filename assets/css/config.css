@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.tela-cre {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#5ceaff, #9df1ff, #bff8ff);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.bloco-centro {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    transform: translateY(40px);
+    image-rendering: pixelated;
+    border: 6px solid black;
+    animation: popup 0.8s ease;
+}
+
+/*css dentro do bloco do menu */
+
+.titulo {
+    color: #2eeeee;
+    transform: translateY(-35px);
+}
+
+.barra {
+    width: 350px;
+    height: 3px;
+    background-color: #2eeeee;
+}
+
+.game-design {
+    max-width: 400px;
+    color: #2eeeee;
+}
+
+.art {
+    max-width: 400px;
+    margin-right: 48px;
+    color: #2eeeee;
+}
+
+.programming {
+    max-width: 400px;
+    color: #2eeeee;
+}
+
+.sound {
+    max-width: 400px;
+    color: #2eeeee;
+    margin-right: 20px;
+}
+
+.special-thanks {
+    max-width: 400px;
+    color: #2eeeee;
+}
+
+.voltar {
+    font-size: medium;
+    width: 220px;
+    height: 50px;
+    background-color: aqua;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 3px solid black;
+    text-decoration: none;
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px #00faff, 0 0 25px #00faff;
+}
+
+.voltar:hover {
+    color: #106ad1;
+    transition: 150ms;
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/*chão da tela de créditos*/
+
+.grass {
+    width: 100%;
+    height: 15px;
+    background-color: #07af23;
+}
+
+.ground {
+    background-color: rgb(100, 59, 6);
+    width: 100%;
+    height: 125px;
+}
+
+@media (min-width: 1600px) {
+
+    .bloco-centro {
+        width: 650px;
+        height: 650px;
+        gap: 30px;
+        transform: translateY(50px);
+        font-size: 1.3rem;
+    }
+
+    .titulo {
+        color: #2eeeee;
+        transform: translateY(-35px);
+    }
+
+    .barra {
+        width: 500px;
+        height: 3px;
+        background-color: #2eeeee;
+    }
+
+    .game-design {
+        max-width: 500px;
+        color: #2eeeee;
+    }
+
+    .art {
+        max-width: 500px;
+        margin-right: 42px;
+        color: #2eeeee;
+    }
+
+    .programming {
+        max-width: 500px;
+        color: #2eeeee;
+    }
+
+    .sound {
+        max-width: 500px;
+        color: #2eeeee;
+    }
+
+    .special-thanks {
+        max-width: 500px;
+        color: #2eeeee;
+    }
+
+    .voltar {
+        font-size: medium;
+        width: 220px;
+        height: 50px;
+        background-color: aqua;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        border: 3px solid black;
+        text-decoration: none;
+        color: #ffffff;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 10px #00faff, 0 0 25px #00faff;
+    }
+
+    .voltar:hover {
+        color: #106ad1;
+        transition: 150ms;
+        transform: scale(1.2);
+        filter: brightness(1.2);
+    }
+
+    .mario {
+        width: 200px;
+        bottom: 295px;
+    }
+
+    .nuvens {
+        width: 700px;
+        bottom: 580px;
+        animation-duration: 25s;
+    }
+
+    .bird {
+        width: 70px;
+        bottom: 680px;
+        animation-duration: 12s;
+    }
+
+    .ground {
+        height: 280px;
+    }
+}
